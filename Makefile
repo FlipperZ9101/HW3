@@ -1,13 +1,11 @@
-CC = g++
-
-main: main.o heartRate.o
-	$(CC) -o main main.o heartRate.o
+all: main.o heartRate.o
+	g++ -std=c++17 main.o heartRate.o -o main
 
 main.o: main.cpp heartRate.h
-	$(CC) -c main.cpp
+	g++ -std=c++17 -c main.cpp
 
 heartRate.o: heartRate.cpp heartRate.h
-	$(CC) -c heartRate.cpp
+	g++ -std=c++17  -c heartRate.cpp
 
 clean:
 	rm *.o

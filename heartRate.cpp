@@ -97,17 +97,17 @@ int heartRate::getAge()
 	return ((year - getYearBirth()) - x);
 }
 
-int heartRate::getMaxHeartRate()
+int heartRate::getMaxHeartRate(int &age)
 {
-	return (220 - getAge());
+	return (220 - age);
 }
 
-void heartRate::getTargetHeartRate(int &minT, int &maxT)
+void heartRate::getTargetHeartRate(int &minT, int &maxT, int &age)
 {
 	int max;
-	max = getMaximumHeartRate();
-	minT = (max * (50/100));
-	maxT = (max * (85/100));
+	max = getMaxHeartRate(age);
+	minT = (max * 50 / 100);
+	maxT = (max * 85 / 100);
 }
 
 

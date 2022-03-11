@@ -17,15 +17,17 @@ int main()
 
 	heartRate person(fName, lName, m, d, y);
 
+	int age = person.getAge();
+
 	cout << "Name: " << person.getFName() << " " << person.getLName() << 
 	"\nDate Of Birth: " << person.getMonthBirth() << "/" << person.getDayBirth() << "/" << person.getYearBirth() << "\n" << endl;
 	
-	cout << "Age: " << person.getAge() << " years old\n" << endl;
+	cout << "Age: " << age << " years old\n" << endl;
 	
-	cout << "Max Heart Rate: " << person.getMaximumHeartRate() << endl;
+	cout << "Max Heart Rate: " << person.getMaxHeartRate(age) << endl;
 	
 	cout << "Target Heart Rate: ";
-	person.getTargetHeartRate(minTarget, maxTarget);
+	person.getTargetHeartRate(minTarget, maxTarget, age);
 	
 	cout << minTarget << " - " << maxTarget;
 	cout << endl; 

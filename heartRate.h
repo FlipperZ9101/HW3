@@ -21,8 +21,8 @@ class heartRate
 	int getDayBirth();
 	int getYearBirth();
 	int getAge();
-	int getMaxHeartRate();
-	void getTargetHeartRate(int &, int &);
+	int getMaxHeartRate(int &);
+	void getTargetHeartRate(int &, int &, int &);
 
 	private:
 	string firstName;
